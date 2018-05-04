@@ -2,9 +2,10 @@ import React from 'react';
 import axios from 'axios';
 
 import Display from './Display';
+import PostLogic from './PostLogic';
 // import DisplayPosts from './DisplayPosts';
 // import DisplayTags from './DisplayTags';
-import {Link} from 'react-router-dom';
+import {Link, Route} from 'react-router-dom';
 
 class MainComponent extends React.Component {
   constructor(props) {
@@ -38,8 +39,10 @@ class MainComponent extends React.Component {
 
     return (
       <div >
+            <Route path="/projects" component={PostLogic} />
+          
             <h1>These are the ACTIONS</h1>
-        {  this.state.users.map((val, i) => {return <div key={val + i} > <Display users={val} />  </div>} )}
+        {  this.state.users.map((val, i) => {return <div key={val + i} > <Display users={val} index={i} />  </div>} )}
         {/* {this.state.users.map((val, i) => {
             console.log('these are the actions: ', val)
           return (
