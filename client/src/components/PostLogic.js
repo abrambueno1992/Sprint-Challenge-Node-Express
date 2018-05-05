@@ -1,6 +1,8 @@
 import React from 'react';
 import DisplayPosts from './DisplayPosts';
 import axios from 'axios';
+import { Link, Route, Switch } from 'react-router-dom';
+
 
 class PostLogic extends React.Component {
     constructor(props) {
@@ -21,7 +23,7 @@ class PostLogic extends React.Component {
         return (
             <div>
                             <h1>These are the PROJECTS</h1>
-               {this.state.posts.map((post, i) => {return <div key={post + i} > <DisplayPosts post={post} />  </div>} )} 
+               {this.state.posts.map((post, i) => {return <div key={post + i} > <DisplayPosts post={post} /> <Link to="/">Back to Actions</Link> </div>} )} 
             </div>
         )
 

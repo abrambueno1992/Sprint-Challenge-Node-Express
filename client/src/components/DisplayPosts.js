@@ -10,7 +10,7 @@ const DisplayPosts = props => {
             <h4>description: {props.post.description}</h4>
 
             <h4>completed: {props.post.completed.toString()}</h4>
-            <Link to="/">Back to Actions</Link>
+            
             {/* <Link to="/posts/posts">Posts</Link> */}
             {/* <Route to="/posts/posts" component={DisplayPosts} /> */}
 
